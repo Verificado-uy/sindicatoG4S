@@ -1,0 +1,910 @@
+<html lang="es"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CST G4S — Centro Sindical de Trabajadores de G4S</title>
+<meta name="description" content="Centro Sindical de Trabajadores de G4S. Afiliados a FUECYS y PIT-CNT. Defendemos los derechos de los trabajadores de seguridad privada en Uruguay.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{--rojo:#B71C1C;--rojo-oscuro:#8B0000;--dorado:#C5A059;--dorado-claro:#D4AF37;--negro:#0a0a0a;--gris-oscuro:#1a1a1a;--gris-medio:#2d2d2d;--gris-texto:#666;--gris-claro:#f5f5f5;--blanco:#fff;--sombra:0 10px 40px rgba(0,0,0,0.12);--sombra-hover:0 20px 60px rgba(0,0,0,0.18);--transicion:all 0.4s cubic-bezier(0.4,0,0.2,1)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Inter',sans-serif;color:var(--gris-oscuro);background:var(--blanco);line-height:1.7;overflow-x:hidden}
+h1,h2,h3,h4,h5,h6{font-family:'Poppins',sans-serif;font-weight:700;line-height:1.2}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+ 
+/* Nav */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.05);transition:var(--transicion)}
+.navbar.scrolled{box-shadow:var(--sombra)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:80px}
+.nav-logo{display:flex;align-items:center;gap:12px;font-family:'Poppins',sans-serif;font-weight:800;font-size:1.3rem;color:var(--rojo)}
+.nav-logo .logo-icon{width:44px;height:44px;background:var(--rojo);color:white;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.nav-links{display:flex;align-items:center;gap:32px;list-style:none}
+.nav-links a{font-size:0.9rem;font-weight:500;color:var(--gris-oscuro);position:relative;transition:var(--transicion)}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--rojo);transition:var(--transicion)}
+.nav-links a:hover{color:var(--rojo)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--rojo);color:white;padding:10px 24px;border-radius:8px;font-weight:600;font-size:0.85rem;transition:var(--transicion);border:2px solid var(--rojo)}
+.nav-cta:hover{background:transparent;color:var(--rojo)}
+.menu-toggle{display:none;background:none;border:none;font-size:1.5rem;color:var(--gris-oscuro);cursor:pointer}
+ 
+/* Hero */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;background:linear-gradient(135deg,var(--gris-oscuro) 0%,var(--negro) 100%);overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1920&q=80') center/cover no-repeat;opacity:0.15}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(183,28,28,0.3) 0%,rgba(0,0,0,0.7) 100%)}
+.hero-content{position:relative;z-index:2;text-align:center;color:white;padding:120px 24px 80px;max-width:900px;margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);padding:8px 20px;border-radius:50px;font-size:0.85rem;font-weight:500;margin-bottom:32px;border:1px solid rgba(255,255,255,0.15);animation:fadeInDown 0.8s ease}
+.hero-badge i{color:var(--dorado)}
+.hero h1{font-size:clamp(2.2rem,5vw,4rem);font-weight:800;margin-bottom:24px;line-height:1.1;animation:fadeInUp 0.8s ease 0.2s both}
+.hero h1 span{color:var(--dorado)}
+.hero-subtitle{font-size:clamp(1rem,2vw,1.25rem);color:rgba(255,255,255,0.8);max-width:700px;margin:0 auto 40px;font-weight:300;animation:fadeInUp 0.8s ease 0.4s both}
+.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeInUp 0.8s ease 0.6s both}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:10px;font-weight:600;font-size:0.95rem;transition:var(--transicion);cursor:pointer;border:none;font-family:'Inter',sans-serif}
+.btn-primary{background:var(--rojo);color:white;box-shadow:0 4px 20px rgba(183,28,28,0.4)}
+.btn-primary:hover{background:var(--rojo-oscuro);transform:translateY(-2px);box-shadow:0 8px 30px rgba(183,28,28,0.5)}
+.btn-secondary{background:transparent;color:white;border:2px solid rgba(255,255,255,0.3)}
+.btn-secondary:hover{border-color:var(--dorado);color:var(--dorado);transform:translateY(-2px)}
+.btn-dorado{background:var(--dorado);color:var(--negro)}
+.btn-dorado:hover{background:var(--dorado-claro);transform:translateY(-2px)}
+.hero-logos{display:flex;gap:40px;justify-content:center;margin-top:60px;opacity:0.6;animation:fadeInUp 0.8s ease 0.8s both}
+.hero-logos span{font-family:'Poppins',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:1px;text-transform:uppercase}
+ 
+/* Sections */
+.section{padding:100px 0;position:relative}
+.section-header{text-align:center;max-width:700px;margin:0 auto 60px}
+.section-tag{display:inline-block;color:var(--rojo);font-weight:600;font-size:0.85rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
+.section-title{font-size:clamp(1.8rem,4vw,2.8rem);color:var(--gris-oscuro);margin-bottom:16px}
+.section-desc{color:var(--gris-texto);font-size:1.05rem}
+ 
+/* About */
+.about{background:var(--gris-claro)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-text h2{font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:24px;color:var(--gris-oscuro)}
+.about-text p{color:var(--gris-texto);font-size:1.05rem;margin-bottom:20px}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+.stat-card{background:white;padding:24px;border-radius:12px;text-align:center;box-shadow:var(--sombra);transition:var(--transicion)}
+.stat-card:hover{transform:translateY(-5px);box-shadow:var(--sombra-hover)}
+.stat-number{font-family:'Poppins',sans-serif;font-size:2rem;font-weight:800;color:var(--rojo)}
+.stat-label{font-size:0.85rem;color:var(--gris-texto);margin-top:4px}
+.about-image{position:relative}
+.about-image img{border-radius:16px;box-shadow:var(--sombra-hover);width:100%;height:500px;object-fit:cover}
+.about-image::before{content:'';position:absolute;top:-20px;right:-20px;width:100%;height:100%;border:3px solid var(--dorado);border-radius:16px;z-index:-1}
+ 
+/* Salaries */
+.salary-section{background:white}
+.salary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
+.salary-card{background:white;border-radius:16px;overflow:hidden;box-shadow:var(--sombra);transition:var(--transicion);border:1px solid rgba(0,0,0,0.05)}
+.salary-card:hover{transform:translateY(-8px);box-shadow:var(--sombra-hover)}
+.salary-header{background:var(--gris-oscuro);color:white;padding:24px;position:relative;overflow:hidden}
+.salary-header::before{content:'';position:absolute;top:0;right:0;width:100px;height:100px;background:var(--rojo);border-radius:50%;transform:translate(30%,-30%);opacity:0.3}
+.salary-header h3{font-size:1.3rem;display:flex;align-items:center;gap:10px}
+.salary-header h3 i{color:var(--dorado)}
+.salary-increment{display:inline-flex;align-items:center;gap:6px;background:var(--rojo);color:white;padding:6px 14px;border-radius:50px;font-size:0.85rem;font-weight:600;margin-top:10px}
+.salary-body{padding:24px}
+.salary-item{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(0,0,0,0.05)}
+.salary-item:last-child{border-bottom:none}
+.salary-role{font-weight:500;color:var(--gris-oscuro)}
+.salary-value{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;color:var(--rojo)}
+.salary-note{background:linear-gradient(135deg,#fff8e1 0%,#ffecb3 100%);border-left:4px solid var(--dorado);padding:16px 20px;border-radius:0 8px 8px 0;margin-top:40px;display:flex;align-items:center;gap:12px;color:var(--gris-oscuro);font-weight:500}
+.salary-note i{color:var(--dorado);font-size:1.2rem}
+ 
+/* Rights cards */
+.know-rights{background:white}
+.rights-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.right-card{background:white;border-radius:16px;padding:32px;text-align:center;border:1px solid rgba(0,0,0,0.06);transition:var(--transicion);position:relative;overflow:hidden}
+.right-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--rojo);transform:scaleX(0);transition:var(--transicion)}
+.right-card:hover::before{transform:scaleX(1)}
+.right-card:hover{transform:translateY(-5px);box-shadow:var(--sombra-hover);border-color:transparent}
+.right-icon{width:64px;height:64px;background:linear-gradient(135deg,#ffebee 0%,#ffcdd2 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.5rem;color:var(--rojo)}
+.right-card h3{font-size:1.1rem;margin-bottom:12px;color:var(--gris-oscuro)}
+.right-card p{color:var(--gris-texto);font-size:0.9rem;line-height:1.6}
+ 
+/* Accordion */
+.rights-section{background:var(--gris-claro)}
+.rights-grid{display:grid;gap:16px;max-width:900px;margin:0 auto}
+.accordion-item{background:white;border-radius:12px;overflow:hidden;box-shadow:var(--sombra);transition:var(--transicion)}
+.accordion-item:hover{box-shadow:var(--sombra-hover)}
+.accordion-header{width:100%;padding:24px 28px;display:flex;align-items:center;justify-content:space-between;background:none;border:none;cursor:pointer;text-align:left;font-family:'Poppins',sans-serif;font-size:1.1rem;font-weight:600;color:var(--gris-oscuro);transition:var(--transicion)}
+.accordion-header:hover{color:var(--rojo)}
+.accordion-header i:first-child{color:var(--rojo);margin-right:14px;font-size:1.2rem;width:24px}
+.accordion-header span{flex:1}
+.accordion-icon{color:var(--gris-texto);transition:var(--transicion);font-size:0.9rem}
+.accordion-item.active .accordion-icon{transform:rotate(180deg);color:var(--rojo)}
+.accordion-body{max-height:0;overflow:hidden;transition:max-height 0.4s ease,padding 0.4s ease;padding:0 28px}
+.accordion-item.active .accordion-body{max-height:800px;padding:0 28px 24px}
+.accordion-body ul{list-style:none;padding:0}
+.accordion-body li{padding:8px 0;padding-left:24px;position:relative;color:var(--gris-texto)}
+.accordion-body li::before{content:'\f00c';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;left:0;color:var(--rojo);font-size:0.8rem}
+.accordion-body strong{color:var(--gris-oscuro)}
+.alert-box{background:linear-gradient(135deg,#ffebee 0%,#ffcdd2 100%);border:2px solid var(--rojo);border-radius:12px;padding:24px;margin-top:40px;display:flex;align-items:flex-start;gap:16px;max-width:900px;margin-left:auto;margin-right:auto}
+.alert-box i{color:var(--rojo);font-size:1.5rem;margin-top:4px}
+.alert-box h4{color:var(--rojo);margin-bottom:8px;font-size:1.1rem}
+.alert-box p{color:var(--gris-oscuro);font-size:0.95rem}
+ 
+/* Delegates */
+.delegates-section{background:var(--gris-oscuro);color:white}
+.delegates-section .section-tag{color:var(--dorado)}
+.delegates-section .section-title{color:white}
+.delegates-section .section-desc{color:rgba(255,255,255,0.7)}
+.delegates-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
+.delegate-card{background:var(--gris-medio);border-radius:16px;padding:28px;transition:var(--transicion);border:1px solid rgba(255,255,255,0.05)}
+.delegate-card:hover{transform:translateY(-5px);border-color:var(--rojo);box-shadow:0 10px 40px rgba(183,28,28,0.2)}
+.delegate-avatar{width:56px;height:56px;background:linear-gradient(135deg,var(--rojo) 0%,var(--rojo-oscuro) 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Poppins',sans-serif;font-weight:700;font-size:1.2rem;color:white;margin-bottom:16px}
+.delegate-name{font-family:'Poppins',sans-serif;font-size:1.1rem;font-weight:600;margin-bottom:4px}
+.delegate-role{color:var(--dorado);font-size:0.85rem;font-weight:500;margin-bottom:16px}
+.delegate-phone{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.8);font-size:0.95rem;margin-bottom:16px}
+.delegate-phone i{color:var(--rojo)}
+.delegate-actions{display:flex;gap:10px}
+.delegate-actions .btn{flex:1;justify-content:center;padding:10px 16px;font-size:0.85rem}
+.btn-call{background:var(--rojo);color:white}
+.btn-wa{background:#25D366;color:white}
+.btn-call:hover,.btn-wa:hover{opacity:0.9;transform:translateY(-2px)}
+ 
+/* Form */
+.affiliation-section{background:var(--gris-claro)}
+.affiliation-form{background:white;border-radius:20px;padding:48px;box-shadow:var(--sombra);max-width:900px;margin:0 auto}
+.form-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.form-group{display:flex;flex-direction:column}
+.form-group.full-width{grid-column:1 / -1}
+.form-group label{font-weight:500;font-size:0.9rem;color:var(--gris-oscuro);margin-bottom:8px}
+.form-group input,.form-group select,.form-group textarea{padding:14px 16px;border:2px solid #e0e0e0;border-radius:10px;font-family:'Inter',sans-serif;font-size:0.95rem;transition:var(--transicion);background:white}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--rojo);box-shadow:0 0 0 4px rgba(183,28,28,0.1)}
+.form-section-title{grid-column:1 / -1;font-family:'Poppins',sans-serif;font-size:1.1rem;font-weight:600;color:var(--rojo);margin-top:20px;padding-bottom:10px;border-bottom:2px solid var(--gris-claro)}
+.submit-btn{grid-column:1 / -1;margin-top:20px}
+.submit-btn .btn{width:100%;justify-content:center;padding:16px;font-size:1.1rem}
+ 
+/* FAQ */
+.faq-section{background:white}
+.faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:1000px;margin:0 auto}
+.faq-item{background:var(--gris-claro);border-radius:12px;overflow:hidden}
+.faq-question{width:100%;padding:20px 24px;background:none;border:none;cursor:pointer;text-align:left;font-family:'Inter',sans-serif;font-weight:600;font-size:0.95rem;color:var(--gris-oscuro);display:flex;justify-content:space-between;align-items:center;transition:var(--transicion)}
+.faq-question:hover{color:var(--rojo)}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.3s ease;padding:0 24px}
+.faq-item.active .faq-answer{max-height:300px;padding:0 24px 20px}
+.faq-answer p{color:var(--gris-texto);font-size:0.9rem;line-height:1.7}
+ 
+/* Timeline */
+.timeline-section{background:var(--gris-claro)}
+.timeline{position:relative;max-width:800px;margin:0 auto;padding-left:40px}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--rojo) 0%,var(--dorado) 100%);border-radius:3px}
+.timeline-item{position:relative;padding-bottom:40px}
+.timeline-item::before{content:'';position:absolute;left:-47px;top:4px;width:16px;height:16px;background:var(--rojo);border-radius:50%;border:3px solid white;box-shadow:0 0 0 3px var(--rojo)}
+.timeline-year{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.2rem;color:var(--rojo);margin-bottom:4px}
+.timeline-text{color:var(--gris-texto);font-size:0.95rem}
+ 
+/* Downloads */
+.downloads-section{background:white}
+.downloads-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.download-card{display:flex;align-items:center;gap:20px;padding:24px;background:var(--gris-claro);border-radius:12px;transition:var(--transicion);border:2px solid transparent}
+.download-card:hover{border-color:var(--rojo);transform:translateX(5px)}
+.download-icon{width:56px;height:56px;background:white;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--rojo);box-shadow:var(--sombra);flex-shrink:0}
+.download-info h4{font-size:1rem;margin-bottom:4px;color:var(--gris-oscuro)}
+.download-info p{font-size:0.85rem;color:var(--gris-texto)}
+.download-info .tag{display:inline-block;background:var(--rojo);color:white;padding:2px 10px;border-radius:50px;font-size:0.7rem;font-weight:600;margin-top:8px}
+ 
+/* News */
+.news-section{background:var(--gris-oscuro);color:white}
+.news-section .section-tag{color:var(--dorado)}
+.news-section .section-title{color:white}
+.news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.news-card{background:var(--gris-medio);border-radius:16px;overflow:hidden;transition:var(--transicion);border:1px solid rgba(255,255,255,0.05)}
+.news-card:hover{transform:translateY(-5px);border-color:var(--rojo)}
+.news-image{height:180px;background:linear-gradient(135deg,var(--rojo) 0%,var(--rojo-oscuro) 100%);display:flex;align-items:center;justify-content:center;font-size:3rem;color:rgba(255,255,255,0.3)}
+.news-content{padding:24px}
+.news-date{color:var(--dorado);font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
+.news-title{font-size:1.1rem;margin-bottom:12px;color:white}
+.news-excerpt{color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.6}
+ 
+/* Footer */
+.footer{background:var(--negro);color:white;padding:80px 0 40px}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
+.footer-brand{display:flex;align-items:center;gap:12px;font-family:'Poppins',sans-serif;font-weight:800;font-size:1.3rem;color:var(--rojo);margin-bottom:20px}
+.footer-brand .logo-icon{width:44px;height:44px;background:var(--rojo);color:white;border-radius:10px;display:flex;align-items:center;justify-content:center}
+.footer-desc{color:rgba(255,255,255,0.6);font-size:0.9rem;line-height:1.7;margin-bottom:24px}
+.footer-social{display:flex;gap:12px}
+.footer-social a{width:40px;height:40px;background:var(--gris-medio);border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;transition:var(--transicion)}
+.footer-social a:hover{background:var(--rojo);transform:translateY(-3px)}
+.footer-links h4{font-size:1rem;margin-bottom:20px;color:white}
+.footer-links ul{list-style:none}
+.footer-links li{margin-bottom:12px}
+.footer-links a{color:rgba(255,255,255,0.6);font-size:0.9rem;transition:var(--transicion)}
+.footer-links a:hover{color:var(--dorado);padding-left:5px}
+.footer-logos{display:flex;gap:30px;justify-content:center;align-items:center;padding:40px 0;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:30px;flex-wrap:wrap}
+.footer-logos span{font-family:'Poppins',sans-serif;font-weight:700;font-size:0.9rem;color:rgba(255,255,255,0.5);letter-spacing:1px}
+.footer-bottom{text-align:center;color:rgba(255,255,255,0.4);font-size:0.85rem}
+ 
+/* Search */
+.search-bar{position:fixed;top:80px;left:0;right:0;background:white;padding:16px 24px;box-shadow:var(--sombra);z-index:999;transform:translateY(-100%);transition:var(--transicion);opacity:0}
+.search-bar.active{transform:translateY(0);opacity:1}
+.search-bar input{width:100%;max-width:700px;margin:0 auto;display:block;padding:14px 24px;border:2px solid #e0e0e0;border-radius:50px;font-family:'Inter',sans-serif;font-size:1rem;outline:none;transition:var(--transicion)}
+.search-bar input:focus{border-color:var(--rojo);box-shadow:0 0 0 4px rgba(183,28,28,0.1)}
+.search-toggle{background:none;border:none;font-size:1.1rem;color:var(--gris-oscuro);cursor:pointer;transition:var(--transicion)}
+.search-toggle:hover{color:var(--rojo)}
+ 
+/* Animations */
+@keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(40px);transition:all 0.8s cubic-bezier(0.4,0,0.2,1)}
+.reveal.active{opacity:1;transform:translateY(0)}
+ 
+/* Responsive */
+@media(max-width:1024px){.about-grid{grid-template-columns:1fr}.about-image{order:-1}.about-image img{height:350px}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nav-links{display:none;position:absolute;top:80px;left:0;right:0;background:white;flex-direction:column;padding:24px;gap:16px;box-shadow:var(--sombra);border-top:1px solid rgba(0,0,0,0.05)}.nav-links.active{display:flex}.menu-toggle{display:block}.nav-cta{display:none}.hero-buttons{flex-direction:column;align-items:center}.btn{width:100%;max-width:300px;justify-content:center}.about-stats{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.faq-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr;gap:40px}.affiliation-form{padding:28px}.section{padding:60px 0}}
+</style>
+</head>
+<body>
+ 
+<nav class="navbar" id="navbar">
+<div class="container nav-inner">
+<a href="#" class="nav-logo"><div class="logo-icon"><i class="fas fa-shield-alt"></i></div>CST G4S</a>
+<ul class="nav-links" id="navLinks">
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#nosotros">Nosotros</a></li>
+<li><a href="#salarios">Escalas Salariales</a></li>
+<li><a href="#derechos">Derechos</a></li>
+<li><a href="#delegados">Delegados</a></li>
+<li><a href="#afiliacion">Afiliacion</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#noticias">Noticias</a></li>
+</ul>
+<div style="display:flex;align-items:center;gap:16px;">
+<button class="search-toggle" id="searchToggle" title="Buscar"><i class="fas fa-search"></i></button>
+<a href="#afiliacion" class="nav-cta">Afiliarme</a>
+<button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+</div>
+</div>
+</nav>
+ 
+<div class="search-bar" id="searchBar">
+<input type="text" placeholder="Buscar derechos, licencias, salarios..." id="searchInput">
+</div>
+ 
+<section class="hero" id="inicio">
+<div class="hero-bg"></div>
+<div class="hero-overlay"></div>
+<div class="hero-content">
+<div class="hero-badge"><i class="fas fa-star"></i>Afiliados a FUECYS · PIT-CNT</div>
+<h1>Defendiendo los <span>derechos</span> de los trabajadores de G4S</h1>
+<p class="hero-subtitle">Somos la organizacion sindical que representa a los trabajadores de seguridad fisica, seguridad electronica y limpieza, luchando por mejores salarios, derechos laborales y condiciones de trabajo.</p>
+<div class="hero-buttons">
+<a href="#afiliacion" class="btn btn-primary"><i class="fas fa-user-plus"></i> Afiliarme</a>
+<a href="#derechos" class="btn btn-secondary"><i class="fas fa-balance-scale"></i> Conocer mis derechos</a>
+</div>
+<div class="hero-logos">
+<span style="color:var(--dorado)">FUECYS</span>
+<span style="color:var(--rojo)">PIT-CNT</span>
+<span style="color:rgba(255,255,255,0.5)">UNATRASE</span>
+</div>
+</div>
+</section>
+ 
+<section class="section about" id="nosotros">
+<div class="container">
+<div class="about-grid">
+<div class="about-text reveal">
+<span class="section-tag">Sobre Nosotros</span>
+<h2>Centro Sindical de Trabajadores de G4S</h2>
+<p>Somos el Centro Sindical de Trabajadores de G4S, afiliados a <strong>FUECYS</strong> y al <strong>PIT-CNT</strong>, comprometidos con la defensa de los derechos laborales de quienes desempenan funciones en seguridad fisica, seguridad electronica y limpieza.</p>
+<p>Nuestro objetivo es <strong>representar, acompanar y defender</strong> a cada trabajador, garantizando condiciones dignas de trabajo, salarios justos y el respeto irrestricto de todos los derechos conquistados.</p>
+<div class="about-stats">
+<div class="stat-card"><div class="stat-number">15+</div><div class="stat-label">Delegados activos</div></div>
+<div class="stat-card"><div class="stat-number">3</div><div class="stat-label">Sectores representados</div></div>
+<div class="stat-card"><div class="stat-number">100%</div><div class="stat-label">Compromiso sindical</div></div>
+</div>
+</div>
+<div class="about-image reveal">
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" alt="Equipo de trabajo">
+</div>
+</div>
+</div>
+</section>
+ 
+<section class="section salary-section" id="salarios">
+<div class="container">
+<div class="section-header reveal">
+<span class="section-tag">Escalas Salariales</span>
+<h2 class="section-title">Valores vigentes 2024</h2>
+<p class="section-desc">Informacion actualizada de los salarios para cada categoria del convenio colectivo.</p>
+</div>
+<div class="salary-grid">
+<div class="salary-card reveal">
+<div class="salary-header">
+<h3><i class="fas fa-user-shield"></i> Seguridad Fisica</h3>
+<span class="salary-increment"><i class="fas fa-arrow-up"></i> Incremento: 2,12%</span>
+</div>
+<div class="salary-body">
+<div class="salary-item"><span class="salary-role">Vigilante Auxiliar (44h)</span><span class="salary-value">$43.090</span></div>
+<div class="salary-item"><span class="salary-role">Vigilante Auxiliar (40h)</span><span class="salary-value">$39.173</span></div>
+<div class="salary-item"><span class="salary-role">Encargado de Turno</span><span class="salary-value">$45.030</span></div>
+<div class="salary-item"><span class="salary-role">Chofer</span><span class="salary-value">$44.102</span></div>
+</div>
+</div>
+<div class="salary-card reveal">
+<div class="salary-header">
+<h3><i class="fas fa-video"></i> Seguridad Electronica</h3>
+<span class="salary-increment"><i class="fas fa-arrow-up"></i> Incremento: 2,88%</span>
+</div>
+<div class="salary-body">
+<div class="salary-item"><span class="salary-role">Chofer Respuesta</span><span class="salary-value">$47.553</span></div>
+<div class="salary-item"><span class="salary-role">Tecnico Primera</span><span class="salary-value">$56.520</span></div>
+<div class="salary-item"><span class="salary-role">Tecnico Segunda</span><span class="salary-value">$45.926</span></div>
+<div class="salary-item"><span class="salary-role">Operador Monitoreo</span><span class="salary-value">$49.460</span></div>
+<div class="salary-item"><span class="salary-role">Operador Servicio Video</span><span class="salary-value">$45.938</span></div>
+</div>
+</div>
+<div class="salary-card reveal">
+<div class="salary-header">
+<h3><i class="fas fa-broom"></i> Limpieza</h3>
+<span class="salary-increment"><i class="fas fa-clock"></i> Valor hora</span>
+</div>
+<div class="salary-body">
+<div class="salary-item"><span class="salary-role">Limpiador</span><span class="salary-value">$201,45</span></div>
+<div class="salary-item"><span class="salary-role">Limpiavidrios</span><span class="salary-value">$216,57</span></div>
+<div class="salary-item"><span class="salary-role">Encargado</span><span class="salary-value">$217,89</span></div>
+<div class="salary-item"><span class="salary-role">Limpieza de Obra</span><span class="salary-value">$341,48</span></div>
+</div>
+</div>
+</div>
+<div class="salary-note reveal">
+<i class="fas fa-info-circle"></i>
+<span><strong>Nota:</strong> Valores vigentes desde julio para cobrar en agosto. Los montos corresponden a la ultima actualizacion del convenio colectivo.</span>
+</div>
+</div>
+</section>
+ 
+<section class="section know-rights" id="conocer-derechos">
+<div class="container">
+<div class="section-header reveal">
+<span class="section-tag">Informacion</span>
+<h2 class="section-title">Conoce tus derechos</h2>
+<p class="section-desc">Beneficios y licencias conquistadas por el sindicato para todos los trabajadores del sector.</p>
+</div>
+<div class="rights-cards">
+<div class="right-card reveal"><div class="right-icon"><i class="fas fa-ring"></i></div><h3>Licencia por Matrimonio</h3><p>6 dias corridos pagos. Uno debe coincidir con la fecha del matrimonio. Solicitar con 30 dias de anticipacion.</p></div>
+<div class="right-card reveal"><div class="right-icon"><i class="fas fa-baby"></i></div><h3>Licencia por Paternidad</h3><p>13 dias corridos. Los primeros 3 dias los paga la empresa, los siguientes 10 el BPS.</p></div>
+<div class="right-card reveal"><div class="right-icon"><i class="fas fa-heart-broken"></i></div><h3>Licencia por Duelo</h3><p>3 dias habiles pagos para padres, hijos, conyuge, concubino y hermanos. Presentar certificado de defuncion.</p></div>
+<div class="right-card reveal"><div class="right-icon"><i class="fas fa-graduation-cap"></i></div><h3>Licencia por Estudio</h3><p>9 dias al ano + 1 dia extra por convenio. Maximo 3 dias por examen. Requiere 6 meses de antiguedad.</p></div>
+<div class="right-card reveal"><div class="right-icon"><i class="fas fa-hands-holding-child"></i></div><h3>Licencia por Cuidados</h3><p>Hasta 10 dias pagos para hijos con discapacidad. Hasta 96 horas para familiares con enfermedad terminal.</p></div>
+<div class="right-card reveal"><div class="right-icon"><i class="fas fa-shield-halved"></i></div><h3>Violencia de Genero</h3><p>1 dia pago al ano + hasta 5 dias habiles sin goce. Beneficio exclusivo del sector de seguridad.</p></div>
+</div>
+</div>
+</section>
+ 
+<section class="section rights-section" id="derechos">
+<div class="container">
+<div class="section-header reveal">
+<span class="section-tag">Derechos Laborales</span>
+<h2 class="section-title">Licencias y beneficios detallados</h2>
+<p class="section-desc">Informacion completa sobre cada beneficio conquistado en el convenio colectivo.</p>
+</div>
+<div class="rights-grid">
+<div class="accordion-item reveal">
+<button class="accordion-header" onclick="toggleAccordion(this)">
+<i class="fas fa-ring"></i>
+<span>1. Licencia por Matrimonio</span>
+<i class="fas fa-chevron-down accordion-icon"></i>
+</button>
+<div class="accordion-body">
+<ul>
+<li><strong>Beneficio mejorado por convenio</strong></li>
+<li>Duracion: <strong>6 dias corridos pagos</strong></li>
+<li>Uno de los dias debe coincidir obligatoriamente con la fecha del matrimonio</li>
+<li>Debe solicitarse con <strong>30 dias de anticipacion</strong></li>
+<li>Al reintegrarse se presenta el <strong>acta de matrimonio</strong></li>
+</ul>
+</div>
+</div>
+<div class="accordion-item reveal">
+<button class="accordion-header" onclick="toggleAccordion(this)">
+<i class="fas fa-baby"></i>
+<span>2. Licencia por Paternidad</span>
+<i class="fas fa-chevron-down accordion-icon"></i>
+</button>
+<div class="accordion-body">
+<ul>
+<li><strong>13 dias corridos</strong></li>
+<li>Los primeros <strong>3 dias</strong> los paga la empresa</li>
+<li>Los siguientes <strong>10 dias</strong> los paga el BPS</li>
+<li>Se debe presentar <strong>certificado de nacido vivo</strong> o partida de nacimiento</li>
+</ul>
+</div>
+</div>
+<div class="accordion-item reveal">
+<button class="accordion-header" onclick="toggleAccordion(this)">
+<i class="fas fa-heart-broken"></i>
+<span>3. Licencia por Duelo</span>
+<i class="fas fa-chevron-down accordion-icon"></i>
+</button>
+<div class="accordion-body">
+<ul>
+<li><strong>Padres, Hijos, Conyuge, Concubino, Hermanos:</strong> 3 dias habiles pagos</li>
+<li><strong>Nietos:</strong> 3 dias habiles pagos</li>
+<li><strong>Abuelos:</strong> 3 dias habiles libres no pagos</li>
+<li>Debe presentarse <strong>certificado de defuncion</strong></li>
+</ul>
+</div>
+</div>
+<div class="accordion-item reveal">
+<button class="accordion-header" onclick="toggleAccordion(this)">
+<i class="fas fa-graduation-cap"></i>
+<span>4. Licencia por Estudio</span>
+<i class="fas fa-chevron-down accordion-icon"></i>
+</button>
+<div class="accordion-body">
+<ul>
+<li>Para trabajadores con mas de <strong>6 meses de antiguedad</strong></li>
+<li>Instituciones oficiales: MEC, UTU, Secundaria, Universidad</li>
+<li>Trabajadores de 40 y 44 horas: <strong>9 dias al ano + 1 dia extra</strong> por convenio</li>
+<li>Maximo: <strong>3 dias por examen</strong></li>
+<li>Debe avisarse con <strong>10 dias habiles</strong> de anticipacion</li>
+<li>Presentar certificado del examen</li>
+<li>Para mantener el beneficio: aprobar al menos <strong>una materia</strong> durante el ano anterior</li>
+</ul>
+</div>
+</div>
+<div class="accordion-item reveal">
+<button class="accordion-header" onclick="toggleAccordion(this)">
+<i class="fas fa-hands-holding-child"></i>
+<span>5. Licencia por Cuidados</span>
+<i class="fas fa-chevron-down accordion-icon"></i>
+</button>
+<div class="accordion-body">
+<ul>
+<li><strong>Hijos con discapacidad:</strong> Hasta 10 dias pagos al ano para controles medicos, tratamientos y gestiones medicas</li>
+<li>Aviso previo de <strong>48 horas</strong></li>
+<li><strong>Familiares con discapacidad o enfermedad terminal:</strong> Hasta 96 horas al ano</li>
+<li>La empresa paga <strong>64 horas</strong></li>
+</ul>
+</div>
+</div>
+<div class="accordion-item reveal">
+<button class="accordion-header" onclick="toggleAccordion(this)">
+<i class="fas fa-shield-halved"></i>
+<span>6. Licencia por Violencia de Genero</span>
+<i class="fas fa-chevron-down accordion-icon"></i>
+</button>
+<div class="accordion-body">
+<ul>
+<li><strong>Beneficio exclusivo del sector</strong></li>
+<li><strong>1 dia pago</strong> al ano</li>
+<li>Hasta <strong>5 dias habiles</strong> sin goce de sueldo</li>
+<li>Debe presentarse: <strong>denuncia policial, denuncia judicial</strong> o constancia del medico forense</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="alert-box reveal">
+<i class="fas fa-exclamation-triangle"></i>
+<div>
+<h4>Importante</h4>
+<p>Para evitar descuentos o sanciones es <strong>obligatorio</strong> respetar los plazos de aviso y presentar toda la documentacion correspondiente.</p>
+</div>
+</div>
+</div>
+</section>
+ 
+<section class="section delegates-section" id="delegados">
+<div class="container">
+<div class="section-header reveal">
+<span class="section-tag">Contacto</span>
+<h2 class="section-title">Nuestros Delegados</h2>
+<p class="section-desc">Comunicate directamente con el delegado de tu zona. Estamos para ayudarte.</p>
+</div>
+<div class="delegates-grid">
+<div class="delegate-card reveal"><div class="delegate-avatar">CR</div><div class="delegate-name">Carlos Ribeiro</div><div class="delegate-role">Delegado Sindical</div><div class="delegate-phone"><i class="fas fa-phone"></i> 093 308 091</div><div class="delegate-actions"><a href="tel:093308091" class="btn btn-call"><i class="fas fa-phone"></i> Llamar</a><a href="https://wa.me/59893308091" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
+<div class="delegate-card reveal"><div class="delegate-avatar">HP</div><div class="delegate-name">Humberto Palacios</div><div class="delegate-role">Delegado Sindical</div><div class="delegate-phone"><i class="fas fa-phone"></i> 097 421 933</div><div class="delegate-actions"><a href="tel:097421933" class="btn btn-call"><i class="fas fa-phone"></i> Llamar</a><a href="https://wa.me/59897421933" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
+<div class="delegate-card reveal"><div class="delegate-avatar">AF</div><div class="delegate-name">Adrian Farias</div><div class="delegate-role">Delegado Sindical</div><div class="delegate-phone"><i class="fas fa-phone"></i> 096 485 364</div><div class="delegate-actions"><a href="tel:096485364" class="btn btn-call"><i class="fas fa-phone"></i> Llamar</a><a href="https://wa.me/59896485364" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
+<div class="delegate-card reveal"><div class="delegate-avatar">NG</div><div class="delegate-name">Nelson Grau</div><div class="delegate-role">Delegado Sindical</div><div class="delegate-phone"><i class="fas fa-phone"></i> 092 757 312</div><div class="delegate-actions"><a href="tel:092757312" class="btn btn-call"><i class="fas fa-phone"></i> Llamar</a><a href="https://wa.me/59892757312" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
+<div class="delegate-card reveal"><div class="delegate-avatar">FR</div><div class="delegate-name">Federico Rodriguez</div><div class="delegate-role">Delegado Sindical</div><div class="delegate-phone"><i class="fas fa-phone"></i> 095 842 317</div><div class="delegate-actions"><a href="tel:095842317" class="btn btn-call"><i class="fas fa-phone"></i> Llamar</a><a href="https://wa.me/59895842317" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
+<div class="delegate-card reveal"><div class="delegate-avatar">RG</div><div class="delegate-name">Rodrigo Gandini</div><div class="delegate-role">Delegado Sindical</div><div class="delegate-phone"><i class="fas fa-phone"></i> 095 286 137</div><div class="delegate-actions"><a href="tel:095286137" class="btn btn-call"><i class="fas fa-phone"></i> Llamar</a><a href="https://wa.me/59895286137" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
+<div class="delegate-card reveal"><div class="delegate-avatar">RF</div><div class="delegate-name">Roberto Fajardo</div><div class="delegate-role">Delegado Sindical</div><div class="delegate-phone"><i class="fas fa-phone"></i> 095 544 715</div><div class="delegate-actions"><a href="tel:095544715" class="btn btn-call"><i class="fas fa-phone"></i> Llamar</a><a href="https://wa.me/59895544715" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
+<div class="delegate-card reveal"><div class="delegate-avatar">LI</div><div class="delegate-name">Laura Irizabal</div><div class="delegate-role">Delegado Sindical</div><div class="delegate-phone"><i class="fas fa-phone"></i> 094 985 949</div><div class="delegate-actions"><a href="tel:094985949" class="btn btn-call"><i class="fas fa-phone"></i> Llamar</a><a href="https://wa.me/59894985949" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
+<div class="delegate-card reveal"><div class="delegate-avatar">AW</div><div class="delegate-name">Ana Walter</div><div class="delegate-role">Delegado Sindical</div><div class="delegate-phone"><i class="fas fa-phone"></i> 092 437 900</div><div class="delegate-actions"><a href="tel:092437900" class="btn btn-call"><i class="fas fa-phone"></i> Llamar</a><a href="https://wa.me/59892437900" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
+<div class="delegate-card reveal"><div class="delegate-avatar">EH</div><div class="delegate-name">Ernesto Hernandez</div><div class="delegate-role">Delegado Sindical</div><div class="delegate-phone"><i class="fas fa-phone"></i> 097 109 113</div><div class="delegate-actions"><a href="tel:097109113" class="btn btn-call"><i class="fas fa-phone"></i> Llamar</a><a href="https://wa.me/59897109113" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
+<div class="delegate-card reveal"><div class="delegate-avatar">EB</div><div class="delegate-name">Emiliano Borges</div><div class="delegate-role">Delegado Sindical</div><div class="delegate-phone"><i class="fas fa-phone"></i> 098 340 314</div><div class="delegate-actions"><a href="tel:098340314" class="btn btn-call"><i class="fas fa-phone"></i> Llamar</a><a href="https://wa.me/59898340314" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
+<div class="delegate-card reveal"><div class="delegate-avatar">HS</div><div class="delegate-name">Hector Solano</div><div class="delegate-role">Delegado Sindical</div><div class="delegate-phone"><i class="fas fa-phone"></i> 094 020 506</div><div class="delegate-actions"><a href="tel:094020506" class="btn btn-call"><i class="fas fa-phone"></i> Llamar</a><a href="https://wa.me/59894020506" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
+<div class="delegate-card reveal"><div class="delegate-avatar">HM</div><div class="delegate-name">Heber Machado</div><div class="delegate-role">Delegado Sindical</div><div class="delegate-phone"><i class="fas fa-phone"></i> 099 952 529</div><div class="delegate-actions"><a href="tel:099952529" class="btn btn-call"><i class="fas fa-phone"></i> Llamar</a><a href="https://wa.me/59899952529" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></div>
+</div>
+</div>
+</section>
+ 
+<section class="section affiliation-section" id="afiliacion">
+<div class="container">
+<div class="section-header reveal">
+<span class="section-tag">Formulario</span>
+<h2 class="section-title">Solicitud de Afiliacion</h2>
+<p class="section-desc">Completa el formulario para iniciar tu proceso de afiliacion al sindicato.</p>
+</div>
+<form class="affiliation-form reveal" id="afiliacionForm">
+<div class="form-grid">
+<div class="form-section-title"><i class="fas fa-user"></i> Datos Personales</div>
+<div class="form-group"><label>Nombre completo</label><input type="text" placeholder="Tu nombre y apellido" required=""></div>
+<div class="form-group"><label>Cedula de identidad</label><input type="text" placeholder="Ej: 1.234.567-8" required=""></div>
+<div class="form-group"><label>Fecha de nacimiento</label><input type="date" required=""></div>
+<div class="form-group"><label>Telefono</label><input type="tel" placeholder="Telefono fijo"></div>
+<div class="form-group"><label>Celular</label><input type="tel" placeholder="099 000 000" required=""></div>
+<div class="form-group full-width"><label>Direccion</label><input type="text" placeholder="Calle y numero" required=""></div>
+<div class="form-group"><label>Departamento</label>
+<select required="">
+<option value="">Seleccionar...</option>
+<option>Montevideo</option><option>Canelones</option><option>Maldonado</option>
+<option>Colonia</option><option>San Jose</option><option>Florida</option>
+<option>Lavalleja</option><option>Rocha</option><option>Treinta y Tres</option>
+<option>Cerro Largo</option><option>Rio Negro</option><option>Paysandu</option>
+<option>Salto</option><option>Artigas</option><option>Rivera</option>
+<option>Tacuarembo</option><option>Durazno</option><option>Flores</option>
+<option>Soriano</option>
+</select>
+</div>
+<div class="form-group"><label>Barrio</label><input type="text" placeholder="Nombre del barrio"></div>
+ 
+<div class="form-section-title"><i class="fas fa-share-alt"></i> Redes Sociales</div>
+<div class="form-group"><label>Facebook</label><input type="text" placeholder="URL o nombre de usuario"></div>
+<div class="form-group"><label>Twitter / X</label><input type="text" placeholder="@usuario"></div>
+<div class="form-group"><label>Instagram</label><input type="text" placeholder="@usuario"></div>
+ 
+<div class="form-section-title"><i class="fas fa-building"></i> Datos de la Empresa</div>
+<div class="form-group"><label>Nombre comercial</label><input type="text" placeholder="Nombre comercial de la empresa"></div>
+<div class="form-group"><label>Razon social</label><input type="text" placeholder="Razon social"></div>
+<div class="form-group full-width"><label>Direccion de la empresa</label><input type="text" placeholder="Direccion completa"></div>
+<div class="form-group"><label>Departamento</label>
+<select>
+<option value="">Seleccionar...</option>
+<option>Montevideo</option><option>Canelones</option><option>Maldonado</option>
+<option>Colonia</option><option>San Jose</option><option>Florida</option>
+<option>Lavalleja</option><option>Rocha</option><option>Treinta y Tres</option>
+<option>Cerro Largo</option><option>Rio Negro</option><option>Paysandu</option>
+<option>Salto</option><option>Artigas</option><option>Rivera</option>
+<option>Tacuarembo</option><option>Durazno</option><option>Flores</option>
+<option>Soriano</option>
+</select>
+</div>
+<div class="form-group"><label>Sucursal</label><input type="text" placeholder="Sucursal"></div>
+<div class="form-group"><label>Barrio</label><input type="text" placeholder="Barrio"></div>
+<div class="form-group"><label>Telefono empresa</label><input type="tel" placeholder="Telefono"></div>
+<div class="form-group"><label>Fax</label><input type="tel" placeholder="Fax"></div>
+<div class="form-group"><label>RUT</label><input type="text" placeholder="RUT de la empresa"></div>
+<div class="form-group"><label>Ramo</label><input type="text" placeholder="Ramo"></div>
+<div class="form-group"><label>Grupo</label><input type="text" placeholder="Grupo"></div>
+<div class="form-group"><label>Subgrupo</label><input type="text" placeholder="Subgrupo"></div>
+ 
+<div class="submit-btn">
+<button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Solicitar Afiliacion</button>
+</div>
+</div>
+</form>
+</div>
+</section>
+ 
+<section class="section faq-section" id="faq">
+<div class="container">
+<div class="section-header reveal">
+<span class="section-tag">Preguntas Frecuentes</span>
+<h2 class="section-title">FAQ</h2>
+<p class="section-desc">Respuestas a las consultas mas habituales sobre licencias, salarios, afiliacion y representacion sindical.</p>
+</div>
+<div class="faq-grid">
+<div class="faq-item reveal">
+<button class="faq-question" onclick="toggleFaq(this)">Como me afilio al sindicato?<i class="fas fa-chevron-down"></i></button>
+<div class="faq-answer"><p>Completa el formulario de afiliacion en esta web o contacta a cualquiera de nuestros delegados. Te guiaremos en todo el proceso.</p></div>
+</div>
+<div class="faq-item reveal">
+<button class="faq-question" onclick="toggleFaq(this)">Cuanto tarda en hacerse efectiva la afiliacion?<i class="fas fa-chevron-down"></i></button>
+<div class="faq-answer"><p>El proceso de afiliacion suele tomar entre 15 y 30 dias habiles una vez presentada toda la documentacion requerida.</p></div>
+</div>
+<div class="faq-item reveal">
+<button class="faq-question" onclick="toggleFaq(this)">Que documentacion necesito para la licencia por estudio?<i class="fas fa-chevron-down"></i></button>
+<div class="faq-answer"><p>Debes presentar certificado de inscripcion de la institucion educativa y, posterior al examen, el certificado de examen rendido.</p></div>
+</div>
+<div class="faq-item reveal">
+<button class="faq-question" onclick="toggleFaq(this)">Los valores salariales son brutos o netos?<i class="fas fa-chevron-down"></i></button>
+<div class="faq-answer"><p>Los valores publicados son salarios brutos mensuales segun el convenio colectivo vigente. Los descuentos de ley aplican sobre estos montos.</p></div>
+</div>
+<div class="faq-item reveal">
+<button class="faq-question" onclick="toggleFaq(this)">Puedo cambiar de delegado si me mudo de zona?<i class="fas fa-chevron-down"></i></button>
+<div class="faq-answer"><p>Si, al cambiar de zona de trabajo o residencia, podes contactar al delegado correspondiente a tu nueva ubicacion para actualizar tus datos.</p></div>
+</div>
+<div class="faq-item reveal">
+<button class="faq-question" onclick="toggleFaq(this)">Que hago si la empresa no respeta mi licencia?<i class="fas fa-chevron-down"></i></button>
+<div class="faq-answer"><p>Contacta inmediatamente a tu delegado sindical. El sindicato esta facultado para intervenir ante incumplimientos del convenio colectivo.</p></div>
+</div>
+<div class="faq-item reveal">
+<button class="faq-question" onclick="toggleFaq(this)">La licencia por violencia de genero es pagada?<i class="fas fa-chevron-down"></i></button>
+<div class="faq-answer"><p>El primer dia es pagado por la empresa. Los siguientes hasta 5 dias habiles son sin goce de sueldo, segun la documentacion presentada.</p></div>
+</div>
+<div class="faq-item reveal">
+<button class="faq-question" onclick="toggleFaq(this)">Como accedo a los convenios colectivos en PDF?<i class="fas fa-chevron-down"></i></button>
+<div class="faq-answer"><p>En la seccion Centro de Descargas de esta web podes encontrar los convenios colectivos, comunicados y formularios en formato PDF.</p></div>
+</div>
+</div>
+</div>
+</section>
+ 
+<section class="section timeline-section" id="timeline">
+<div class="container">
+<div class="section-header reveal">
+<span class="section-tag">Historia</span>
+<h2 class="section-title">Linea de tiempo</h2>
+<p class="section-desc">Principales hitos del sindicato en la defensa de los trabajadores de G4S.</p>
+</div>
+<div class="timeline">
+<div class="timeline-item reveal"><div class="timeline-year">2015</div><div class="timeline-text">Constitucion oficial del Centro Sindical de Trabajadores de G4S como organizacion gremial representativa del sector.</div></div>
+<div class="timeline-item reveal"><div class="timeline-year">2017</div><div class="timeline-text">Primera conquista salarial significativa con aumento del 8% para todo el personal de seguridad fisica y electronica.</div></div>
+<div class="timeline-item reveal"><div class="timeline-year">2019</div><div class="timeline-text">Incorporacion del sector de limpieza a la representacion sindical, ampliando la cobertura gremial.</div></div>
+<div class="timeline-item reveal"><div class="timeline-year">2021</div><div class="timeline-text">Conquista de la licencia por violencia de genero, beneficio exclusivo del sector de seguridad privada.</div></div>
+<div class="timeline-item reveal"><div class="timeline-year">2023</div><div class="timeline-text">Ampliacion de la licencia por estudio a 10 dias anuales y mejora en los beneficios de licencia por matrimonio.</div></div>
+<div class="timeline-item reveal"><div class="timeline-year">2024</div><div class="timeline-text">Actualizacion de escalas salariales con incrementos del 2,12% en seguridad fisica y 2,88% en seguridad electronica.</div></div>
+</div>
+</div>
+</section>
+ 
+<section class="section downloads-section" id="descargas">
+<div class="container">
+<div class="section-header reveal">
+<span class="section-tag">Documentos</span>
+<h2 class="section-title">Centro de Descargas</h2>
+<p class="section-desc">Accede a convenios colectivos, comunicados y formularios oficiales del sindicato.</p>
+</div>
+<div class="downloads-grid">
+<div class="download-card reveal"><div class="download-icon"><i class="fas fa-file-pdf"></i></div><div class="download-info"><h4>Convenio Colectivo 2024</h4><p>Texto completo del convenio vigente</p><span class="tag">PDF</span></div></div>
+<div class="download-card reveal"><div class="download-icon"><i class="fas fa-file-pdf"></i></div><div class="download-info"><h4>Escala Salarial 2024</h4><p>Tabla de valores actualizada por categoria</p><span class="tag">PDF</span></div></div>
+<div class="download-card reveal"><div class="download-icon"><i class="fas fa-file-pdf"></i></div><div class="download-info"><h4>Formulario de Afiliacion</h4><p>Documento para presentar en persona</p><span class="tag">PDF</span></div></div>
+<div class="download-card reveal"><div class="download-icon"><i class="fas fa-file-pdf"></i></div><div class="download-info"><h4>Comunicado Interno - Julio 2024</h4><p>Informacion sobre incrementos salariales</p><span class="tag">PDF</span></div></div>
+<div class="download-card reveal"><div class="download-icon"><i class="fas fa-file-pdf"></i></div><div class="download-info"><h4>Guia de Derechos Laborales</h4><p>Resumen de todos los beneficios conquistados</p><span class="tag">PDF</span></div></div>
+<div class="download-card reveal"><div class="download-icon"><i class="fas fa-file-pdf"></i></div><div class="download-info"><h4>Modelo de Reclamo</h4><p>Plantilla para presentar reclamos formales</p><span class="tag">PDF</span></div></div>
+</div>
+</div>
+</section>
+ 
+<section class="section news-section" id="noticias">
+<div class="container">
+<div class="section-header reveal">
+<span class="section-tag">Novedades</span>
+<h2 class="section-title">Noticias y Comunicados</h2>
+<p class="section-desc">Mantente informado sobre las ultimas novedades sindicales del sector.</p>
+</div>
+<div class="news-grid">
+<div class="news-card reveal">
+<div class="news-image"><i class="fas fa-bullhorn"></i></div>
+<div class="news-content">
+<div class="news-date">Julio 2024</div>
+<h3 class="news-title">Nuevas escalas salariales vigentes</h3>
+<p class="news-excerpt">Se acordaron incrementos del 2,12% para seguridad fisica y 2,88% para seguridad electronica, aplicables desde julio 2024.</p>
+</div>
+</div>
+<div class="news-card reveal">
+<div class="news-image"><i class="fas fa-handshake"></i></div>
+<div class="news-content">
+<div class="news-date">Junio 2024</div>
+<h3 class="news-title">Reunion plenaria de delegados</h3>
+<p class="news-excerpt">Se realizo la reunion mensual con todos los delegados activos para evaluar el estado de las negociaciones sectoriales.</p>
+</div>
+</div>
+<div class="news-card reveal">
+<div class="news-image"><i class="fas fa-shield-alt"></i></div>
+<div class="news-content">
+<div class="news-date">Mayo 2024</div>
+<h3 class="news-title">Jornada de capacitacion sindical</h3>
+<p class="news-excerpt">Nueva jornada de formacion para delegados en derecho laboral y tecnicas de negociacion colectiva.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+ 
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div>
+<div class="footer-brand"><div class="logo-icon"><i class="fas fa-shield-alt"></i></div>CST G4S</div>
+<p class="footer-desc">Centro Sindical de Trabajadores de G4S. Afiliados a FUECYS y PIT-CNT. Defendemos los derechos de los trabajadores de seguridad privada en Uruguay.</p>
+<div class="footer-social">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+<div class="footer-links">
+<h4>Secciones</h4>
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#nosotros">Nosotros</a></li>
+<li><a href="#salarios">Escalas Salariales</a></li>
+<li><a href="#derechos">Derechos</a></li>
+<li><a href="#delegados">Delegados</a></li>
+</ul>
+</div>
+<div class="footer-links">
+<h4>Informacion</h4>
+<ul>
+<li><a href="#afiliacion">Afiliacion</a></li>
+<li><a href="#faq">Preguntas Frecuentes</a></li>
+<li><a href="#descargas">Descargas</a></li>
+<li><a href="#noticias">Noticias</a></li>
+<li><a href="#timeline">Historia</a></li>
+</ul>
+</div>
+<div class="footer-links">
+<h4>Contacto</h4>
+<ul>
+<li><a href="#delegados">Delegados por zona</a></li>
+<li><a href="mailto:info@cstg4s.org">info@cstg4s.org</a></li>
+<li><a href="tel:+59800000000">+598 0000 0000</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-logos">
+<span style="color:var(--dorado)">FUECYS</span>
+<span style="color:var(--rojo)">PIT-CNT</span>
+<span style="color:rgba(255,255,255,0.5)">UNATRASE</span>
+</div>
+<div class="footer-bottom">
+<p>Centro Sindical de Trabajadores de G4S · Todos los derechos reservados · 2024</p>
+</div>
+</div>
+</footer>
+ 
+<script>
+// Accordion
+function toggleAccordion(btn) {
+    const item = btn.parentElement;
+    const wasActive = item.classList.contains('active');
+    document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) item.classList.add('active');
+}
+ 
+// FAQ
+function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const wasActive = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) item.classList.add('active');
+}
+ 
+// Mobile menu
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+ 
+// Navbar scroll effect
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
+});
+ 
+// Search toggle
+const searchToggle = document.getElementById('searchToggle');
+const searchBar = document.getElementById('searchBar');
+searchToggle.addEventListener('click', () => {
+    searchBar.classList.toggle('active');
+    if (searchBar.classList.contains('active')) {
+        document.getElementById('searchInput').focus();
+    }
+});
+ 
+// Close search on click outside
+searchBar.addEventListener('click', (e) => {
+    if (e.target === searchBar) searchBar.classList.remove('active');
+});
+ 
+// Scroll reveal
+const reveals = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.1 });
+ 
+reveals.forEach(el => revealObserver.observe(el));
+ 
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+            navLinks.classList.remove('active');
+        }
+    });
+});
+ 
+// WhatsApp Form Submission
+const afiliacionForm = document.getElementById('afiliacionForm');
+afiliacionForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+ 
+    const formData = new FormData(afiliacionForm);
+    const inputs = afiliacionForm.querySelectorAll('input, select');
+ 
+    let mensaje = '*SOLICITUD DE AFILIACION - CST G4S*%0A%0A';
+    mensaje += '═══════════════════════%0A%0A';
+ 
+    const secciones = {
+        'Datos Personales': [],
+        'Redes Sociales': [],
+        'Datos de la Empresa': []
+    };
+ 
+    let seccionActual = 'Datos Personales';
+ 
+    inputs.forEach(input => {
+        if (input.type === 'submit') return;
+ 
+        // Detectar cambio de seccion por el titulo anterior
+        const prev = input.previousElementSibling;
+        if (prev && prev.classList && prev.classList.contains('form-section-title')) {
+            if (prev.textContent.includes('Redes')) seccionActual = 'Redes Sociales';
+            else if (prev.textContent.includes('Empresa')) seccionActual = 'Datos de la Empresa';
+        }
+ 
+        const label = input.previousElementSibling;
+        if (label && label.tagName === 'LABEL' && input.value.trim()) {
+            const nombre = label.textContent.trim();
+            const valor = input.value.trim();
+            secciones[seccionActual]..push(`*${nombre}:* ${valor}`);
+        }
+    });
+ 
+    // Tambien capturar los que estan despues de label dentro del mismo form-group
+    const grupos = afiliacionForm.querySelectorAll('.form-group');
+    let msg = '*SOLICITUD DE AFILIACION - CST G4S*%0A%0A';
+    msg += '═══════════════════════%0A';
+    msg += '*DATOS PERSONALES*%0A';
+    msg += '-------------------%0A';
+ 
+    const datos = {};
+    grupos.forEach(g => {
+        const label = g.querySelector('label');
+        const input = g.querySelector('input, select, textarea');
+        if (label && input && input.value.trim()) {
+            datos[label.textContent.trim()] = input.value.trim();
+        }
+    });
+ 
+    const ordenPersonal = ['Nombre completo', 'Cedula de identidad', 'Fecha de nacimiento', 'Telefono', 'Celular', 'Direccion', 'Departamento', 'Barrio'];
+    const ordenRedes = ['Facebook', 'Twitter / X', 'Instagram'];
+    const ordenEmpresa = ['Nombre comercial', 'Razon social', 'Direccion de la empresa', 'Departamento', 'Sucursal', 'Barrio', 'Telefono empresa', 'Fax', 'RUT', 'Ramo', 'Grupo', 'Subgrupo'];
+ 
+    ordenPersonal.forEach(k => {
+        if (datos[k]) msg += `%E2%9C%85 *${k}:* ${datos[k]}%0A`;
+    });
+ 
+    const tieneRedes = ordenRedes.some(k => datos[k]);
+    if (tieneRedes) {
+        msg += '%0A*REDES SOCIALES*%0A';
+        msg += '-------------------%0A';
+        ordenRedes.forEach(k => {
+            if (datos[k]) msg += `%F0%9F%93%B1 *${k}:* ${datos[k]}%0A`;
+        });
+    }
+ 
+    msg += '%0A*DATOS DE LA EMPRESA*%0A';
+    msg += '-------------------%0A';
+    ordenEmpresa.forEach(k => {
+        if (datos[k]) msg += `%F0%9F%8F%A2 *${k}:* ${datos[k]}%0A`;
+    });
+ 
+    msg += '%0A═══════════════════════%0A';
+    msg += '_Solicitud enviada desde cstg4s.org_';
+ 
+    // Numero de WhatsApp del sindicato (ejemplo: Heber Machado 099 952 529)
+    const telefonoSindicato = '59899952529';
+ 
+    const url = `https://wa.me/${telefonoSindicato}?text=${msg}`;
+    window.open(url, '_blank');
+});
+</script>
+ 
+ 
+</body></html>
