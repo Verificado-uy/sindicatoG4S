@@ -1,10 +1,12 @@
-<html lang="es"><head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CST G4S — Centro Sindical de Trabajadores de G4S</title>
 <meta name="description" content="Centro Sindical de Trabajadores de G4S. Afiliados a FUECYS y PIT-CNT. Defendemos los derechos de los trabajadores de seguridad privada en Uruguay.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 <style>
@@ -16,7 +18,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Poppins',sans-serif;font-weight:700;line-height:1
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
 .container{max-width:1280px;margin:0 auto;padding:0 24px}
- 
+
 /* Nav */
 .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,0.95);backdrop-filter:blur(20px);border-bottom:1px solid rgba(0,0,0,0.05);transition:var(--transicion)}
 .navbar.scrolled{box-shadow:var(--sombra)}
@@ -31,7 +33,7 @@ img{max-width:100%;display:block}
 .nav-cta{background:var(--rojo);color:white;padding:10px 24px;border-radius:8px;font-weight:600;font-size:0.85rem;transition:var(--transicion);border:2px solid var(--rojo)}
 .nav-cta:hover{background:transparent;color:var(--rojo)}
 .menu-toggle{display:none;background:none;border:none;font-size:1.5rem;color:var(--gris-oscuro);cursor:pointer}
- 
+
 /* Hero */
 .hero{min-height:100vh;display:flex;align-items:center;position:relative;background:linear-gradient(135deg,var(--gris-oscuro) 0%,var(--negro) 100%);overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=1920&q=80') center/cover no-repeat;opacity:0.15}
@@ -52,14 +54,14 @@ img{max-width:100%;display:block}
 .btn-dorado:hover{background:var(--dorado-claro);transform:translateY(-2px)}
 .hero-logos{display:flex;gap:40px;justify-content:center;margin-top:60px;opacity:0.6;animation:fadeInUp 0.8s ease 0.8s both}
 .hero-logos span{font-family:'Poppins',sans-serif;font-weight:700;font-size:0.9rem;letter-spacing:1px;text-transform:uppercase}
- 
+
 /* Sections */
 .section{padding:100px 0;position:relative}
 .section-header{text-align:center;max-width:700px;margin:0 auto 60px}
 .section-tag{display:inline-block;color:var(--rojo);font-weight:600;font-size:0.85rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:12px}
 .section-title{font-size:clamp(1.8rem,4vw,2.8rem);color:var(--gris-oscuro);margin-bottom:16px}
 .section-desc{color:var(--gris-texto);font-size:1.05rem}
- 
+
 /* About */
 .about{background:var(--gris-claro)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
@@ -73,7 +75,7 @@ img{max-width:100%;display:block}
 .about-image{position:relative}
 .about-image img{border-radius:16px;box-shadow:var(--sombra-hover);width:100%;height:500px;object-fit:cover}
 .about-image::before{content:'';position:absolute;top:-20px;right:-20px;width:100%;height:100%;border:3px solid var(--dorado);border-radius:16px;z-index:-1}
- 
+
 /* Salaries */
 .salary-section{background:white}
 .salary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:30px}
@@ -91,7 +93,7 @@ img{max-width:100%;display:block}
 .salary-value{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.1rem;color:var(--rojo)}
 .salary-note{background:linear-gradient(135deg,#fff8e1 0%,#ffecb3 100%);border-left:4px solid var(--dorado);padding:16px 20px;border-radius:0 8px 8px 0;margin-top:40px;display:flex;align-items:center;gap:12px;color:var(--gris-oscuro);font-weight:500}
 .salary-note i{color:var(--dorado);font-size:1.2rem}
- 
+
 /* Rights cards */
 .know-rights{background:white}
 .rights-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
@@ -102,7 +104,7 @@ img{max-width:100%;display:block}
 .right-icon{width:64px;height:64px;background:linear-gradient(135deg,#ffebee 0%,#ffcdd2 100%);border-radius:16px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:1.5rem;color:var(--rojo)}
 .right-card h3{font-size:1.1rem;margin-bottom:12px;color:var(--gris-oscuro)}
 .right-card p{color:var(--gris-texto);font-size:0.9rem;line-height:1.6}
- 
+
 /* Accordion */
 .rights-section{background:var(--gris-claro)}
 .rights-grid{display:grid;gap:16px;max-width:900px;margin:0 auto}
@@ -124,7 +126,7 @@ img{max-width:100%;display:block}
 .alert-box i{color:var(--rojo);font-size:1.5rem;margin-top:4px}
 .alert-box h4{color:var(--rojo);margin-bottom:8px;font-size:1.1rem}
 .alert-box p{color:var(--gris-oscuro);font-size:0.95rem}
- 
+
 /* Delegates */
 .delegates-section{background:var(--gris-oscuro);color:white}
 .delegates-section .section-tag{color:var(--dorado)}
@@ -143,7 +145,7 @@ img{max-width:100%;display:block}
 .btn-call{background:var(--rojo);color:white}
 .btn-wa{background:#25D366;color:white}
 .btn-call:hover,.btn-wa:hover{opacity:0.9;transform:translateY(-2px)}
- 
+
 /* Form */
 .affiliation-section{background:var(--gris-claro)}
 .affiliation-form{background:white;border-radius:20px;padding:48px;box-shadow:var(--sombra);max-width:900px;margin:0 auto}
@@ -156,7 +158,7 @@ img{max-width:100%;display:block}
 .form-section-title{grid-column:1 / -1;font-family:'Poppins',sans-serif;font-size:1.1rem;font-weight:600;color:var(--rojo);margin-top:20px;padding-bottom:10px;border-bottom:2px solid var(--gris-claro)}
 .submit-btn{grid-column:1 / -1;margin-top:20px}
 .submit-btn .btn{width:100%;justify-content:center;padding:16px;font-size:1.1rem}
- 
+
 /* FAQ */
 .faq-section{background:white}
 .faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:1000px;margin:0 auto}
@@ -166,7 +168,7 @@ img{max-width:100%;display:block}
 .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease,padding 0.3s ease;padding:0 24px}
 .faq-item.active .faq-answer{max-height:300px;padding:0 24px 20px}
 .faq-answer p{color:var(--gris-texto);font-size:0.9rem;line-height:1.7}
- 
+
 /* Timeline */
 .timeline-section{background:var(--gris-claro)}
 .timeline{position:relative;max-width:800px;margin:0 auto;padding-left:40px}
@@ -175,7 +177,7 @@ img{max-width:100%;display:block}
 .timeline-item::before{content:'';position:absolute;left:-47px;top:4px;width:16px;height:16px;background:var(--rojo);border-radius:50%;border:3px solid white;box-shadow:0 0 0 3px var(--rojo)}
 .timeline-year{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.2rem;color:var(--rojo);margin-bottom:4px}
 .timeline-text{color:var(--gris-texto);font-size:0.95rem}
- 
+
 /* Downloads */
 .downloads-section{background:white}
 .downloads-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
@@ -185,7 +187,7 @@ img{max-width:100%;display:block}
 .download-info h4{font-size:1rem;margin-bottom:4px;color:var(--gris-oscuro)}
 .download-info p{font-size:0.85rem;color:var(--gris-texto)}
 .download-info .tag{display:inline-block;background:var(--rojo);color:white;padding:2px 10px;border-radius:50px;font-size:0.7rem;font-weight:600;margin-top:8px}
- 
+
 /* News */
 .news-section{background:var(--gris-oscuro);color:white}
 .news-section .section-tag{color:var(--dorado)}
@@ -198,7 +200,7 @@ img{max-width:100%;display:block}
 .news-date{color:var(--dorado);font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px}
 .news-title{font-size:1.1rem;margin-bottom:12px;color:white}
 .news-excerpt{color:rgba(255,255,255,0.7);font-size:0.9rem;line-height:1.6}
- 
+
 /* Footer */
 .footer{background:var(--negro);color:white;padding:80px 0 40px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
@@ -216,7 +218,7 @@ img{max-width:100%;display:block}
 .footer-logos{display:flex;gap:30px;justify-content:center;align-items:center;padding:40px 0;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1);margin-bottom:30px;flex-wrap:wrap}
 .footer-logos span{font-family:'Poppins',sans-serif;font-weight:700;font-size:0.9rem;color:rgba(255,255,255,0.5);letter-spacing:1px}
 .footer-bottom{text-align:center;color:rgba(255,255,255,0.4);font-size:0.85rem}
- 
+
 /* Search */
 .search-bar{position:fixed;top:80px;left:0;right:0;background:white;padding:16px 24px;box-shadow:var(--sombra);z-index:999;transform:translateY(-100%);transition:var(--transicion);opacity:0}
 .search-bar.active{transform:translateY(0);opacity:1}
@@ -224,20 +226,21 @@ img{max-width:100%;display:block}
 .search-bar input:focus{border-color:var(--rojo);box-shadow:0 0 0 4px rgba(183,28,28,0.1)}
 .search-toggle{background:none;border:none;font-size:1.1rem;color:var(--gris-oscuro);cursor:pointer;transition:var(--transicion)}
 .search-toggle:hover{color:var(--rojo)}
- 
+
 /* Animations */
 @keyframes fadeInUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeInDown{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
 .reveal{opacity:0;transform:translateY(40px);transition:all 0.8s cubic-bezier(0.4,0,0.2,1)}
 .reveal.active{opacity:1;transform:translateY(0)}
- 
+
 /* Responsive */
 @media(max-width:1024px){.about-grid{grid-template-columns:1fr}.about-image{order:-1}.about-image img{height:350px}.footer-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:768px){.nav-links{display:none;position:absolute;top:80px;left:0;right:0;background:white;flex-direction:column;padding:24px;gap:16px;box-shadow:var(--sombra);border-top:1px solid rgba(0,0,0,0.05)}.nav-links.active{display:flex}.menu-toggle{display:block}.nav-cta{display:none}.hero-buttons{flex-direction:column;align-items:center}.btn{width:100%;max-width:300px;justify-content:center}.about-stats{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.faq-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr;gap:40px}.affiliation-form{padding:28px}.section{padding:60px 0}}
 </style>
+<base target="_blank">
 </head>
 <body>
- 
+
 <nav class="navbar" id="navbar">
 <div class="container nav-inner">
 <a href="#" class="nav-logo"><div class="logo-icon"><i class="fas fa-shield-alt"></i></div>CST G4S</a>
@@ -258,16 +261,16 @@ img{max-width:100%;display:block}
 </div>
 </div>
 </nav>
- 
+
 <div class="search-bar" id="searchBar">
 <input type="text" placeholder="Buscar derechos, licencias, salarios..." id="searchInput">
 </div>
- 
+
 <section class="hero" id="inicio">
 <div class="hero-bg"></div>
 <div class="hero-overlay"></div>
 <div class="hero-content">
-<div class="hero-badge"><i class="fas fa-star"></i>Afiliados a FUECYS · PIT-CNT</div>
+<div class="hero-badge"><i class="fas fa-star"></i>Afiliados a FUECYS &middot; PIT-CNT</div>
 <h1>Defendiendo los <span>derechos</span> de los trabajadores de G4S</h1>
 <p class="hero-subtitle">Somos la organizacion sindical que representa a los trabajadores de seguridad fisica, seguridad electronica y limpieza, luchando por mejores salarios, derechos laborales y condiciones de trabajo.</p>
 <div class="hero-buttons">
@@ -281,7 +284,7 @@ img{max-width:100%;display:block}
 </div>
 </div>
 </section>
- 
+
 <section class="section about" id="nosotros">
 <div class="container">
 <div class="about-grid">
@@ -302,7 +305,7 @@ img{max-width:100%;display:block}
 </div>
 </div>
 </section>
- 
+
 <section class="section salary-section" id="salarios">
 <div class="container">
 <div class="section-header reveal">
@@ -355,7 +358,7 @@ img{max-width:100%;display:block}
 </div>
 </div>
 </section>
- 
+
 <section class="section know-rights" id="conocer-derechos">
 <div class="container">
 <div class="section-header reveal">
@@ -373,7 +376,7 @@ img{max-width:100%;display:block}
 </div>
 </div>
 </section>
- 
+
 <section class="section rights-section" id="derechos">
 <div class="container">
 <div class="section-header reveal">
@@ -486,7 +489,7 @@ img{max-width:100%;display:block}
 </div>
 </div>
 </section>
- 
+
 <section class="section delegates-section" id="delegados">
 <div class="container">
 <div class="section-header reveal">
@@ -511,7 +514,7 @@ img{max-width:100%;display:block}
 </div>
 </div>
 </section>
- 
+
 <section class="section affiliation-section" id="afiliacion">
 <div class="container">
 <div class="section-header reveal">
@@ -519,17 +522,17 @@ img{max-width:100%;display:block}
 <h2 class="section-title">Solicitud de Afiliacion</h2>
 <p class="section-desc">Completa el formulario para iniciar tu proceso de afiliacion al sindicato.</p>
 </div>
-<form class="affiliation-form reveal" id="afiliacionForm">
+<form class="affiliation-form reveal" onsubmit="event.preventDefault(); alert('Solicitud enviada correctamente. Nos contactaremos a la brevedad.');">
 <div class="form-grid">
 <div class="form-section-title"><i class="fas fa-user"></i> Datos Personales</div>
-<div class="form-group"><label>Nombre completo</label><input type="text" placeholder="Tu nombre y apellido" required=""></div>
-<div class="form-group"><label>Cedula de identidad</label><input type="text" placeholder="Ej: 1.234.567-8" required=""></div>
-<div class="form-group"><label>Fecha de nacimiento</label><input type="date" required=""></div>
+<div class="form-group"><label>Nombre completo</label><input type="text" placeholder="Tu nombre y apellido" required></div>
+<div class="form-group"><label>Cedula de identidad</label><input type="text" placeholder="Ej: 1.234.567-8" required></div>
+<div class="form-group"><label>Fecha de nacimiento</label><input type="date" required></div>
 <div class="form-group"><label>Telefono</label><input type="tel" placeholder="Telefono fijo"></div>
-<div class="form-group"><label>Celular</label><input type="tel" placeholder="099 000 000" required=""></div>
-<div class="form-group full-width"><label>Direccion</label><input type="text" placeholder="Calle y numero" required=""></div>
+<div class="form-group"><label>Celular</label><input type="tel" placeholder="099 000 000" required></div>
+<div class="form-group full-width"><label>Direccion</label><input type="text" placeholder="Calle y numero" required></div>
 <div class="form-group"><label>Departamento</label>
-<select required="">
+<select required>
 <option value="">Seleccionar...</option>
 <option>Montevideo</option><option>Canelones</option><option>Maldonado</option>
 <option>Colonia</option><option>San Jose</option><option>Florida</option>
@@ -541,12 +544,12 @@ img{max-width:100%;display:block}
 </select>
 </div>
 <div class="form-group"><label>Barrio</label><input type="text" placeholder="Nombre del barrio"></div>
- 
+
 <div class="form-section-title"><i class="fas fa-share-alt"></i> Redes Sociales</div>
 <div class="form-group"><label>Facebook</label><input type="text" placeholder="URL o nombre de usuario"></div>
 <div class="form-group"><label>Twitter / X</label><input type="text" placeholder="@usuario"></div>
 <div class="form-group"><label>Instagram</label><input type="text" placeholder="@usuario"></div>
- 
+
 <div class="form-section-title"><i class="fas fa-building"></i> Datos de la Empresa</div>
 <div class="form-group"><label>Nombre comercial</label><input type="text" placeholder="Nombre comercial de la empresa"></div>
 <div class="form-group"><label>Razon social</label><input type="text" placeholder="Razon social"></div>
@@ -571,7 +574,7 @@ img{max-width:100%;display:block}
 <div class="form-group"><label>Ramo</label><input type="text" placeholder="Ramo"></div>
 <div class="form-group"><label>Grupo</label><input type="text" placeholder="Grupo"></div>
 <div class="form-group"><label>Subgrupo</label><input type="text" placeholder="Subgrupo"></div>
- 
+
 <div class="submit-btn">
 <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Solicitar Afiliacion</button>
 </div>
@@ -579,7 +582,7 @@ img{max-width:100%;display:block}
 </form>
 </div>
 </section>
- 
+
 <section class="section faq-section" id="faq">
 <div class="container">
 <div class="section-header reveal">
@@ -623,7 +626,7 @@ img{max-width:100%;display:block}
 </div>
 </div>
 </section>
- 
+
 <section class="section timeline-section" id="timeline">
 <div class="container">
 <div class="section-header reveal">
@@ -641,7 +644,7 @@ img{max-width:100%;display:block}
 </div>
 </div>
 </section>
- 
+
 <section class="section downloads-section" id="descargas">
 <div class="container">
 <div class="section-header reveal">
@@ -659,7 +662,7 @@ img{max-width:100%;display:block}
 </div>
 </div>
 </section>
- 
+
 <section class="section news-section" id="noticias">
 <div class="container">
 <div class="section-header reveal">
@@ -695,7 +698,7 @@ img{max-width:100%;display:block}
 </div>
 </div>
 </section>
- 
+
 <footer class="footer">
 <div class="container">
 <div class="footer-grid">
@@ -744,167 +747,80 @@ img{max-width:100%;display:block}
 <span style="color:rgba(255,255,255,0.5)">UNATRASE</span>
 </div>
 <div class="footer-bottom">
-<p>Centro Sindical de Trabajadores de G4S · Todos los derechos reservados · 2024</p>
+<p>Centro Sindical de Trabajadores de G4S &middot; Todos los derechos reservados &middot; 2024</p>
 </div>
 </div>
 </footer>
- 
+
 <script>
 // Accordion
 function toggleAccordion(btn) {
-    const item = btn.parentElement;
-    const wasActive = item.classList.contains('active');
-    document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
-    if (!wasActive) item.classList.add('active');
+    const item = btn.parentElement;
+    const wasActive = item.classList.contains('active');
+    document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) item.classList.add('active');
 }
- 
+
 // FAQ
 function toggleFaq(btn) {
-    const item = btn.parentElement;
-    const wasActive = item.classList.contains('active');
-    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-    if (!wasActive) item.classList.add('active');
+    const item = btn.parentElement;
+    const wasActive = item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+    if (!wasActive) item.classList.add('active');
 }
- 
+
 // Mobile menu
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
 menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    navLinks.classList.toggle('active');
 });
- 
+
 // Navbar scroll effect
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) navbar.classList.add('scrolled');
-    else navbar.classList.remove('scrolled');
+    if (window.scrollY > 50) navbar.classList.add('scrolled');
+    else navbar.classList.remove('scrolled');
 });
- 
+
 // Search toggle
 const searchToggle = document.getElementById('searchToggle');
 const searchBar = document.getElementById('searchBar');
 searchToggle.addEventListener('click', () => {
-    searchBar.classList.toggle('active');
-    if (searchBar.classList.contains('active')) {
-        document.getElementById('searchInput').focus();
-    }
+    searchBar.classList.toggle('active');
+    if (searchBar.classList.contains('active')) {
+        document.getElementById('searchInput').focus();
+    }
 });
- 
+
 // Close search on click outside
 searchBar.addEventListener('click', (e) => {
-    if (e.target === searchBar) searchBar.classList.remove('active');
+    if (e.target === searchBar) searchBar.classList.remove('active');
 });
- 
+
 // Scroll reveal
 const reveals = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        }
-    });
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
 }, { threshold: 0.1 });
- 
+
 reveals.forEach(el => revealObserver.observe(el));
- 
+
 // Smooth scroll for nav links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth' });
-            navLinks.classList.remove('active');
-        }
-    });
-});
- 
-// WhatsApp Form Submission
-const afiliacionForm = document.getElementById('afiliacionForm');
-afiliacionForm.addEventListener('submit', function(e) {
-    e.preventDefault();
- 
-    const formData = new FormData(afiliacionForm);
-    const inputs = afiliacionForm.querySelectorAll('input, select');
- 
-    let mensaje = '*SOLICITUD DE AFILIACION - CST G4S*%0A%0A';
-    mensaje += '═══════════════════════%0A%0A';
- 
-    const secciones = {
-        'Datos Personales': [],
-        'Redes Sociales': [],
-        'Datos de la Empresa': []
-    };
- 
-    let seccionActual = 'Datos Personales';
- 
-    inputs.forEach(input => {
-        if (input.type === 'submit') return;
- 
-        // Detectar cambio de seccion por el titulo anterior
-        const prev = input.previousElementSibling;
-        if (prev && prev.classList && prev.classList.contains('form-section-title')) {
-            if (prev.textContent.includes('Redes')) seccionActual = 'Redes Sociales';
-            else if (prev.textContent.includes('Empresa')) seccionActual = 'Datos de la Empresa';
-        }
- 
-        const label = input.previousElementSibling;
-        if (label && label.tagName === 'LABEL' && input.value.trim()) {
-            const nombre = label.textContent.trim();
-            const valor = input.value.trim();
-            secciones[seccionActual]..push(`*${nombre}:* ${valor}`);
-        }
-    });
- 
-    // Tambien capturar los que estan despues de label dentro del mismo form-group
-    const grupos = afiliacionForm.querySelectorAll('.form-group');
-    let msg = '*SOLICITUD DE AFILIACION - CST G4S*%0A%0A';
-    msg += '═══════════════════════%0A';
-    msg += '*DATOS PERSONALES*%0A';
-    msg += '-------------------%0A';
- 
-    const datos = {};
-    grupos.forEach(g => {
-        const label = g.querySelector('label');
-        const input = g.querySelector('input, select, textarea');
-        if (label && input && input.value.trim()) {
-            datos[label.textContent.trim()] = input.value.trim();
-        }
-    });
- 
-    const ordenPersonal = ['Nombre completo', 'Cedula de identidad', 'Fecha de nacimiento', 'Telefono', 'Celular', 'Direccion', 'Departamento', 'Barrio'];
-    const ordenRedes = ['Facebook', 'Twitter / X', 'Instagram'];
-    const ordenEmpresa = ['Nombre comercial', 'Razon social', 'Direccion de la empresa', 'Departamento', 'Sucursal', 'Barrio', 'Telefono empresa', 'Fax', 'RUT', 'Ramo', 'Grupo', 'Subgrupo'];
- 
-    ordenPersonal.forEach(k => {
-        if (datos[k]) msg += `%E2%9C%85 *${k}:* ${datos[k]}%0A`;
-    });
- 
-    const tieneRedes = ordenRedes.some(k => datos[k]);
-    if (tieneRedes) {
-        msg += '%0A*REDES SOCIALES*%0A';
-        msg += '-------------------%0A';
-        ordenRedes.forEach(k => {
-            if (datos[k]) msg += `%F0%9F%93%B1 *${k}:* ${datos[k]}%0A`;
-        });
-    }
- 
-    msg += '%0A*DATOS DE LA EMPRESA*%0A';
-    msg += '-------------------%0A';
-    ordenEmpresa.forEach(k => {
-        if (datos[k]) msg += `%F0%9F%8F%A2 *${k}:* ${datos[k]}%0A`;
-    });
- 
-    msg += '%0A═══════════════════════%0A';
-    msg += '_Solicitud enviada desde cstg4s.org_';
- 
-    // Numero de WhatsApp del sindicato (ejemplo: Heber Machado 099 952 529)
-    const telefonoSindicato = '59899952529';
- 
-    const url = `https://wa.me/${telefonoSindicato}?text=${msg}`;
-    window.open(url, '_blank');
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth' });
+            navLinks.classList.remove('active');
+        }
+    });
 });
 </script>
- 
- 
-</body></html>
+</body>
+</html>
