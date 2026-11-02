@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rincón Dulce | Repostería Fina y Alta Pastelería</title>
+    <!-- Favicon Actualizado -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/xqJdQXyX/favicon.png">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+    <!-- Script para forzar el inicio de la página arriba en celulares y computadoras -->
+    <script>
+        window.addEventListener('load', function() {
+            if (window.location.hash) {
+                setTimeout(function() {
+                    window.scrollTo(0, 0);
+                }, 1);
+            }
+        });
+    </script>
+</head>
+<body class="bg-amber-50/30 text-stone-800">
+
+    <!-- Header / Barra de Navegación -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-rose-100">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <img src="https://i.postimg.cc/Dzkf3Yb2/Save-Clip-App-453274537-506569795356183-5226062403379414466-n.jpg" alt="Logo Rincón Dulce" class="w-10 h-10 rounded-full object-cover shadow-sm border border-rose-200">
+                <span class="text-2xl font-serif font-bold text-rose-600">Rincón Dulce</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-stone-600">
+                <a href="#inicio" class="hover:text-rose-600 transition">Inicio</a>
+                <a href="#catalogo" class="hover:text-rose-600 transition">Catálogo</a>
+                <a href="#sobre-nosotros" class="hover:text-rose-600 transition">Sobre Nosotros</a>
+                <a href="#contacto" class="hover:text-rose-600 transition">Contacto</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <a href="https://www.instagram.com/dulces_casero_s/" target="_blank" class="hidden sm:flex items-center gap-1.5 text-stone-600 hover:text-rose-600 text-xs font-semibold px-3 py-2 rounded-full border border-stone-200 hover:border-rose-200 transition">
+                    <svg class="w-4 h-4 text-stone-700" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Instagram
+                </a>
+                <a href="https://wa.me/59898617652?text=¡Hola!%20Quisiera%20pedir%20un%20presupuesto." target="_blank" class="bg-rose-500 hover:bg-rose-600 text-white text-sm font-medium px-4 py-2 rounded-full shadow-md transition flex items-center gap-2">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    Presupuesto por WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Portada (Hero) -->
+    <section id="inicio" class="relative bg-gradient-to-b from-rose-100/60 to-amber-50/30 py-20 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <span class="bg-rose-200/60 text-rose-800 text-xs font-semibold px-4 py-1.5 rounded-full uppercase tracking-widest border border-rose-300/40">Repostería Fina y Alta Calidad</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-stone-900 mt-5 mb-6">Repostería fina y alta pastelería para tus celebraciones</h1>
+            <p class="text-lg text-stone-600 mb-8 leading-relaxed">Elaboración propia de alta calidad y diseño exclusivo. Creado por una repostera profesional, ofrecemos tortas personalizadas con toppers a medida, tortas de bodas y 15 años, mesas de postres, dulces caseros tradicionales (dulce de leche, cortado, boniato, higo y zapallo), muffins, galletitas, sorrentinos artesanales, pizzas y tortas de fiambre.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#catalogo" class="bg-rose-500 hover:bg-rose-600 text-white font-medium px-8 py-3.5 rounded-full shadow-lg transition flex items-center justify-center gap-2">
+                    Ver Catálogo de Productos
+                </a>
+                <a href="https://wa.me/59898617652?text=¡Hola!%20Quisiera%20consultar%20presupuesto%20para%20un%20pedido." target="_blank" class="bg-white hover:bg-stone-50 text-stone-800 border border-stone-200 font-medium px-8 py-3.5 rounded-full shadow-sm transition flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4 fill-emerald-600" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    Consultar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catálogo de Productos -->
+    <section id="catalogo" class="max-w-6xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-stone-900">Nuestros Productos</h2>
+            <p class="text-stone-600 mt-2">Todo se elabora exclusivamente a pedido con estándares profesionales.</p>
+        </div>
+
+        <!-- Grid de Productos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Item 1: Tortas Infantiles Personalizadas -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-stone-100 flex flex-col">
+                <div class="h-64 overflow-hidden bg-stone-100 relative">
+                    <img src="https://i.postimg.cc/SsR6Fs9z/Save-Clip-App-574353886-24608278725510656-6142808577546812739-n.jpg" alt="Tortas Personalizadas Infantiles" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-rose-700 text-xs font-semibold px-3 py-1 rounded-full shadow">Infantiles & Toppers</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Tortas Infantiles Personalizadas</h3>
+                        <p class="text-stone-600 text-sm mb-4 leading-relaxed">Diseños únicos con toppers de cualquier temática preferida, rellenos artesanales deliciosos y acabados impecables.</p>
+                    </div>
+                    <a href="https://wa.me/59898617652?text=¡Hola!%20Quisiera%20presupuesto%20para%20una%20torta%20infantil%20personalizada." target="_blank" class="w-full text-center bg-rose-50 hover:bg-rose-100 text-rose-700 font-medium py-2.5 rounded-xl transition text-sm">Pedir Presupuesto</a>
+                </div>
+            </div>
+
+            <!-- Item 2: Tortas Temáticas Especiales -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-stone-100 flex flex-col">
+                <div class="h-64 overflow-hidden bg-stone-100 relative">
+                    <img src="https://i.postimg.cc/Gtsvt5z6/Save-Clip-App-575206095-24625757857096076-2569835550984685775-n.jpg" alt="Tortas Temáticas" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-rose-700 text-xs font-semibold px-3 py-1 rounded-full shadow">Temáticas</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Tortas Temáticas Especiales</h3>
+                        <p class="text-stone-600 text-sm mb-4 leading-relaxed">Ambientaciones detalladas (como la selva y personajes modelados) para hacer cada festejo inolvidable.</p>
+                    </div>
+                    <a href="https://wa.me/59898617652?text=¡Hola!%20Quisiera%20presupuesto%20para%20una%20torta%20temática." target="_blank" class="w-full text-center bg-rose-50 hover:bg-rose-100 text-rose-700 font-medium py-2.5 rounded-xl transition text-sm">Pedir Presupuesto</a>
+                </div>
+            </div>
+
+            <!-- Item 3: Tortas para Bodas y Celebraciones -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-stone-100 flex flex-col">
+                <div class="h-64 overflow-hidden bg-stone-100 relative">
+                    <img src="https://i.postimg.cc/VNCRd56T/Gemini-Generated-Image-qyec23qyec23qyec.jpg" alt="Tortas de Bodas" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-rose-700 text-xs font-semibold px-3 py-1 rounded-full shadow">Bodas & 15 Años</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Tortas para Bodas y Celebraciones</h3>
+                        <p class="text-stone-600 text-sm mb-4 leading-relaxed">Elegantes diseños de varios pisos con perlas y detalles finos para coronar los momentos más importantes.</p>
+                    </div>
+                    <a href="https://wa.me/59898617652?text=¡Hola!%20Quisiera%20presupuesto%20para%20una%20torta%20de%20boda%20o%2015%20años." target="_blank" class="w-full text-center bg-rose-50 hover:bg-rose-100 text-rose-700 font-medium py-2.5 rounded-xl transition text-sm">Pedir Presupuesto</a>
+                </div>
+            </div>
+
+            <!-- Item 4: Tortas Drip Cake & Clásicas -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-stone-100 flex flex-col">
+                <div class="h-64 overflow-hidden bg-stone-100 relative">
+                    <img src="https://i.postimg.cc/KYPM6TjW/Gemini-Generated-Image-  putwh9putwh9putw.jpg" alt="Drip Cake y Clásicas" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-rose-700 text-xs font-semibold px-3 py-1 rounded-full shadow">Drip Cakes</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Tortas Drip Cake & Clásicas</h3>
+                        <p class="text-stone-600 text-sm mb-4 leading-relaxed">Deliciosas coberturas de ganache de chocolate, rellenos abundantes y una presentación sumamente atractiva.</p>
+                    </div>
+                    <a href="https://wa.me/59898617652?text=¡Hola!%20Quisiera%20presupuesto%20por%20una%20torta%20drip%20cake." target="_blank" class="w-full text-center bg-rose-50 hover:bg-rose-100 text-rose-700 font-medium py-2.5 rounded-xl transition text-sm">Pedir Presupuesto</a>
+                </div>
+            </div>
+
+            <!-- Item 5: Mesas Dulces, Dulces Caseros & Muffins -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-stone-100 flex flex-col">
+                <div class="h-64 overflow-hidden bg-stone-100 relative">
+                    <img src="https://i.postimg.cc/cLmKTSz1/Gemini-Generated-Image-csg1dgcsg1dgcsg1.jpg" alt="Mesas de Postres, Dulces Caseros y Muffins" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-rose-700 text-xs font-semibold px-3 py-1 rounded-full shadow">Dulces Artesanales</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Mesas Dulces & Dulces Caseros</h3>
+                        <p class="text-stone-600 text-sm mb-4 leading-relaxed">Dulces tradicionales (dulce de leche, cortado, boniato, higo y zapallo), muffins esponjosos, galletitas y postres variados.</p>
+                    </div>
+                    <a href="https://wa.me/59898617652?text=¡Hola!%20Quisiera%20presupuesto%20para%20mesa%20de%20postres,%20muffins%20y%20dulces%20caseros." target="_blank" class="w-full text-center bg-rose-50 hover:bg-rose-100 text-rose-700 font-medium py-2.5 rounded-xl transition text-sm">Pedir Presupuesto</a>
+                </div>
+            </div>
+
+            <!-- Item 6: Sorrentinos Caseros & Salados -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition border border-stone-100 flex flex-col">
+                <div class="h-64 overflow-hidden bg-stone-100 relative">
+                    <img src="https://i.postimg.cc/bNMpQNpj/Gemini-Generated-Image-hudilshudilshudi.jpg" alt="Sorrentinos Caseros y Salados" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+                    <span class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm text-rose-700 text-xs font-semibold px-3 py-1 rounded-full shadow">Pastas & Salados</span>
+                </div>
+                <div class="p-6 flex-1 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-stone-900 mb-2">Sorrentinos Caseros & Salados</h3>
+                        <p class="text-stone-600 text-sm mb-4 leading-relaxed">Sorrentinos artesanales (jamón y queso, calabacín con nueces, muzzarella con panceta y albahaca, espinaca con ricota, o carne). Además: pizzas caseras y tortas de fiambre.</p>
+                    </div>
+                    <a href="https://wa.me/59898617652?text=¡Hola!%20Quisiera%20presupuesto%20por%20los%20sorrentinos%20caseros%20y%20opciones%20saladas." target="_blank" class="w-full text-center bg-rose-50 hover:bg-rose-100 text-rose-700 font-medium py-2.5 rounded-xl transition text-sm">Pedir Presupuesto</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Banner Destacado de Instagram (Especial para celulares y visitantes) -->
+    <section class="max-w-6xl mx-auto px-4 py-8">
+        <div class="bg-gradient-to-r from-rose-500 via-pink-500 to-purple-600 rounded-3xl p-8 md:p-12 text-white text-center shadow-xl relative overflow-hidden">
+            <div class="relative z-10 max-w-2xl mx-auto">
+                <h3 class="text-2xl md:text-4xl font-serif font-bold mb-4">¿Querés ver más fotos de nuestros trabajos?</h3>
+                <p class="text-rose-100 text-sm md:text-base mb-8 leading-relaxed">
+                    Visitá nuestro perfil de Instagram para descubrir galerías completas, videos de preparaciones y todas nuestras últimas creaciones en detalle.
+                </p>
+                <a href="https://www.instagram.com/dulces_casero_s/" target="_blank" class="inline-flex items-center gap-2 bg-white text-stone-900 font-semibold px-8 py-4 rounded-full shadow-lg hover:bg-rose-50 transition duration-300">
+                    <svg class="w-5 h-5 fill-rose-600" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Explorar @dulces_casero_s
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="sobre-nosotros" class="bg-white py-16 border-y border-stone-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-stone-900 mb-6">Excelencia y dedicación profesional</h2>
+            <p class="text-stone-600 text-lg leading-relaxed mb-6">
+                En <strong>Rincón Dulce</strong> combinamos técnica experta y elaboración propia de alta calidad. Cada creación dulce y salada está diseñada para cumplir con los estándares más exigentes, garantizando que tus celebraciones y eventos tengan el nivel de distinción que merecen.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer / Contacto -->
+    <footer id="contacto" class="bg-stone-900 text-stone-300 py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-serif font-bold text-white mb-4">Rincón Dulce</h2>
+            <p class="text-sm text-stone-400 mb-6">Consultas y presupuestos personalizados por WhatsApp al 098 617 652.</p>
+            <div class="flex justify-center gap-4 mb-8 flex-wrap">
+                <a href="https://wa.me/59898617652?text=¡Hola!%20Quisiera%20consultar%20presupuesto." target="_blank" class="bg-rose-500 hover:bg-rose-600 text-white font-medium px-7 py-3 rounded-full transition shadow-lg flex items-center gap-2 text-sm">
+                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    WhatsApp (098 617 652)
+                </a>
+                <a href="https://www.instagram.com/dulces_casero_s/" target="_blank" class="bg-stone-800 hover:bg-stone-700 text-stone-200 border border-stone-700 font-medium px-7 py-3 rounded-full transition shadow-lg flex items-center gap-2 text-sm">
+                    <svg class="w-4 h-4 fill-current text-rose-400" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Instagram (@dulces_casero_s)
+                </a>
+            </div>
+            <div class="border-t border-stone-800 pt-6 text-xs text-stone-500">
+                &copy; 2026 Rincón Dulce. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
